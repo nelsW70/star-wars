@@ -1,12 +1,12 @@
 <div>
   <ul class="nav nav-tabs">
-    <li role="presentation">
+    <li role="presentation" [ngClass]="{ active: chosenList === 'all' }">
       <a (click)="onChoose('all')">All</a>
     </li>
-    <li role="presentation">
+    <li role="presentation" [ngClass]="{ active: chosenList === 'light' }">
       <a (click)="onChoose('light')">Light</a>
     </li>
-    <li role="presentation">
+    <li role="presentation" [ngClass]="{ active: chosenList === 'dark' }">
       <a (click)="onChoose('dark')">Dark</a>
     </li>
   </ul>
