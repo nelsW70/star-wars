@@ -1,7 +1,14 @@
 <div>
   <ul class="nav nav-tabs">
-    <li role="presentation"><a href="#">All</a></li>
-    <li role="presentation"><a href="#">Light</a></li>
-    <li role="presentation"><a href="#">Dark</a></li>
+    <li role="presentation">
+      <a (click)="onChoose('all')">All</a>
+    </li>
+    <li role="presentation">
+      <a (click)="onChoose('light')">Light</a>
+    </li>
+    <li role="presentation">
+      <a (click)="onChoose('dark')">Dark</a>
+    </li>
   </ul>
+  <app-list [characters]="getCharacters()"></app-list>
 </div>
