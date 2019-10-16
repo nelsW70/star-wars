@@ -17,9 +17,6 @@ export class ItemComponent implements OnInit {
   ngOnInit() {}
 
   onAssign(side) {
-    // this.character.side = side;
-    // this.sideAssigned.emit({ name: this.character.name, side: side });
-    // const swService = new StarWarsService();
     this.swService.onSideChosen({ name: this.character.name, side: side });
   }
 }
