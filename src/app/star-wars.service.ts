@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 import { LogService } from './log.service';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
@@ -22,8 +22,8 @@ export class StarWarsService {
 
   fetchCharacters() {
     this.http
-      .get('https://swapi.co/api/people')
-      .map((response: Response) => {
+      .get('https://swapi.co/api/people/')
+      .map(response => {
         const data = response.json();
         const extractedChars = data.results;
         const chars = extractedChars.map(char => {
