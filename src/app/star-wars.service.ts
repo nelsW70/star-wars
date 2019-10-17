@@ -32,7 +32,6 @@ export class StarWarsService {
         return chars;
       })
       .subscribe(data => {
-        console.log(data);
         this.characters = data;
         this.charactersChanged.next();
       });
