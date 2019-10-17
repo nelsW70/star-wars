@@ -7,7 +7,6 @@ import { StarWarsService } from './star-wars.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'star-wars';
   swService: StarWarsService;
 
   constructor(swService: StarWarsService) {
